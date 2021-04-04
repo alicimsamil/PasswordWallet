@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wallet_navigation"
+    app:startDestination="@id/opening">
+
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.alisamil.passwordwallet.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.alisamil.passwordwallet.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_login_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/opening"
+        android:name="com.alisamil.passwordwallet.Opening"
+        android:label="fragment_opening"
+        tools:layout="@layout/fragment_opening" >
+        <action
+            android:id="@+id/action_opening_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.alisamil.passwordwallet.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_passSave"
+            app:destination="@id/passSave" />
+        <action
+            android:id="@+id/action_mainScreen_to_passShow"
+            app:destination="@id/passShow" />
+        <argument
+            android:name="UserId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/passSave"
+        android:name="com.alisamil.passwordwallet.PassSave"
+        android:label="fragment_pass_save"
+        tools:layout="@layout/fragment_pass_save" >
+        <action
+            android:id="@+id/action_passSave_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <argument
+            android:name="UserID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/passShow"
+        android:name="com.alisamil.passwordwallet.PassShow"
+        android:label="fragment_pass_show"
+        tools:layout="@layout/fragment_pass_show" >
+        <argument
+            android:name="Bitmap"
+            app:argType="android.graphics.Bitmap" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="rawId"
+            app:argType="integer" />
+        <argument
+            android:name="UserID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_passShow_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_passShow_to_passEdit"
+            app:destination="@id/passEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/passEdit"
+        android:name="com.alisamil.passwordwallet.PassEdit"
+        android:label="fragment_pass_edit"
+        tools:layout="@layout/fragment_pass_edit" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_passEdit_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

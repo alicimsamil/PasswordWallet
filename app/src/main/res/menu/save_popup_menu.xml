@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+        <item
+
+            android:id="@+id/instagram_menu"
+            android:title="Instagram"
+            android:icon="@drawable/instagram"
+            ></item>
+        <item
+            android:id="@+id/twitter_menu"
+            android:icon="@drawable/twitter"
+            android:title="Twitter"></item>
+        <item
+            android:id="@+id/facebook_menu"
+            android:icon="@drawable/facebook"
+            android:title="Facebook"></item>
+        <item
+            android:id="@+id/youtube_menu"
+            android:icon="@drawable/youtube"
+            android:title="Youtube"></item>
+        <item
+            android:id="@+id/whatsapp_menu"
+            android:icon="@drawable/whatsapp"
+            android:title="Whatsapp"></item>
+        <item
+            android:id="@+id/tumblr_menu"
+            android:icon="@drawable/tumblr"
+            android:title="Tumblr"></item>
+        <item
+            android:id="@+id/spotify_menu"
+            android:icon="@drawable/spotify"
+            android:title="Spotify"></item>
+        <item
+            android:id="@+id/snapchat_menu"
+            android:icon="@drawable/snapchat"
+            android:title="Snapchat"></item>
+
+        <item
+            android:id="@+id/outlook_menu"
+            android:icon="@drawable/outlook"
+            android:title="Outlook"></item>
+        <item
+            android:id="@+id/likedin_menu"
+            android:icon="@drawable/linkedin"
+            android:title="Linkedin"></item>
+        <item
+            android:id="@+id/gmail_menu"
+            android:icon="@drawable/gmail"
+            android:title="Gmail"></item>
+        <item
+            android:id="@+id/discord_menu"
+            android:icon="@drawable/discord"
+            android:title="Discord"></item>
+        <item
+            android:id="@+id/unknown_menu"
+            android:icon="@drawable/unknownapp"
+            android:title="Other"></item>
+
+
+
+
+
+
+
+</menu>
